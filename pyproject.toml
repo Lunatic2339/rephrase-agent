@@ -1,0 +1,25 @@
+[project]
+name = "rephrase"
+version = "0.1.0"
+description = "옛 명곡의 프레이즈를 지금의 귀에 맞게 다시 짜는 LangGraph 음악 재구성 에이전트"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "audioop-lts>=0.2.2",
+    "google-genai>=2.31.0",
+    "grandalf>=0.8",
+    "langgraph>=1.2.16",
+    "langgraph-checkpoint-sqlite>=3.1.2",
+    "librosa>=1.0.0",
+    "openai>=3.35.1",
+    "pydub>=0.25.1",
+    "pyloudnorm>=0.2.0",
+    "python-dotenv>=1.2.4",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rephrase"]
